@@ -18,8 +18,13 @@ void solve(int value)
         }
     }
 
+    puts("RESULTADO: ");
     for (i = 0; i < c; i++) {
-        printf("%d ", ans[i]);
+        if (ans[i] != 100)
+            printf("%dc ", ans[i]);
+        else 
+            printf("1R ");
+        
     }
 
     puts("");
@@ -28,6 +33,11 @@ void solve(int value)
 
 int main()
 {
-    solve(93);
+    int num;
+
+    printf("Insira o numero: ");
+    scanf("%d", &num);
+
+    solve(num);
     return 0;
 }
